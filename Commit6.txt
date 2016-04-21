@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+char *isElement(char *tab, char znak)
+{
+   int i;
+   for (i=0;tab[i]!='\0';i++)
+     {
+        if (tab[i]==znak){ return &tab[i];}
+     }
+   return NULL;
+}
+main()
+{
+  int rozmiar=14;
+  char symbol='x';
+  char *wynik;
+  char napis[rozmiar];
+  fgets(napis, rozmiar, stdin);
+  wynik=isElement(napis,symbol);
+  if (wynik!=NULL)
+    printf("Znaleziono znak %c, pod adresem %p \n", *wynik, wynik);
+  else
+    printf("Nie znaleziono danego znaku.");
+
+  return 0;
+}
