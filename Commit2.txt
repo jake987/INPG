@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-#include<stdio.h>
+#include<stdio.h>asfbkjsabfkjasbnfjasmbfkjasfbkjasbfkjasbfsjakbfa33333333
 #include<math.h>
 struct z
 {
