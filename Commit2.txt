@@ -1,0 +1,104 @@
+<<<<<<< HEAD
+#include<stdio.h>
+#include<math.h>
+struct z
+{
+   int re;
+   int im;
+
+};
+struct z dodawanie(struct z z1, struct z z2)
+{
+   struct z z3;
+   z3.re=z1.re+z2.re;
+   z3.im=z1.im+z2.im;
+   return z3;
+}
+double modul(struct z z1)
+{
+  double mod;
+  mod=sqrt((z1.re*z1.re)+(z1.im*z1.im));
+  return mod;
+
+} 
+struct z sprzezenie(struct z z1)
+{
+  struct z z2;
+  z2.re=z1.re;
+  z2.im=-z1.im;
+  return z2;
+}
+void wypisz_zesp(struct z z1)
+{
+  printf("%d +%di \n", z1.re, z1.im);
+}
+int main()
+{
+  struct z z1,z2,z3;
+  double mod;
+  z1.re=1;
+  z1.im=2;
+  z2.re=3;
+  z2.im=4;
+  z3=dodawanie(z1,z2);
+  printf("Wynikiem dodawania liczb zespolonych, jest liczba: ");
+  wypisz_zesp(z3);
+  mod=modul(z1);
+  printf("Modul pierwszej liczby zesponej to: %.2f\n", mod);
+  z3=sprzezenie(z1);
+  printf("Sprzezenie pierwszej liczy to: ");
+  wypisz_zesp(z3);
+  return 0;
+=======
+#include<stdio.h>
+#include<math.h>
+struct z
+{
+   int re;
+   int im;
+
+};
+struct z dodawanie(struct z z1, struct z z2)
+{
+   struct z z3;
+   z3.re=z1.re+z2.re;
+   z3.im=z1.im+z2.im;
+   return z3;fsafasfafasf
+}
+double modul(struct z z1)
+{
+  double mod;
+  mod=sqrt((z1.re*z1.re)+(z1.im*fasfz1.im));
+  return mod;
+
+} 
+struct z sprzezenie(struct z z1)
+{
+  struct z z2;
+  z2.re=z1.re;
+  z2.im=-z1.im;
+  return z2;
+}
+void wypisz_zesp(struct z z1)
+{
+  printf("%d +%di \n", z1.re, z1.im);
+}
+int main()
+{
+  struct z z1,z2,z3;
+  double mod;
+  z1.re=1;
+  z1.im=2;
+  z2.re=3;
+  z2.im=4;
+  z3=dodawanie(z1,z2);
+  printf("Wynikiem dodawania liczb zespolonych, jest liczba: ");
+  wypisz_zesp(z3);
+  mod=modul(z1);
+  printf("Modul pierwszej liczby zesponej to: %.2f\n", mod);
+  z3=sprzezenie(z1);
+  printf("Sprzezenie pierwszej liczy to: ");
+  wypisz_zesp(z3);
+  return 0;
+>>>>>>> 0ee83d676b6ab8a233b43842757da3221b9f6ac8
+}
