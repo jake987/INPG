@@ -1,0 +1,60 @@
+<<<<<<< HEAD
+#include<stdio.h>
+long int  newton(int n, int  k)
+{
+  if (k==n||k==0)
+    return 1;
+  else
+    {
+       return newton(n-1,k-1)+newton(n-1,k);
+    }
+}
+main()
+{
+  int n,k;
+  printf("Podaj pierwszy element:\n");
+  scanf("%d",&n);
+  printf("Podaj drugi element:\n");
+  scanf("%d",&k);
+  long int wynik;
+ 
+   if (k<0||n<0||n<k)
+   {
+      printf("Podales zle liczby\n");
+   }
+  else
+   {
+      wynik=newton(n,k);
+     printf("Wynik to: %ld\n", wynik);
+   }
+=======
+#include<stdio.h>
+long int  newton(int n, int  k)
+{
+  if (k==n||k==0)
+    return 1;
+  else
+    {
+       return newton(n-1,k-1)+newton(n-1,k);
+    }
+}
+main()
+{
+  int n,k;
+  printf("Podaj pierwszy element:\n");
+  scanf("%d",&n);
+  printf("Podaj drugi element:\n");
+  scanf("%d",&k);
+  long int wynik;
+ 
+   if (k<0||n<0||n<k)
+   {
+      printf("Podales zle liczby\n");
+   }
+  else
+   {
+      wynik=newton(n,k);
+     printf("Wynik to: %ld\n", wynik);
+   }
+>>>>>>> 0ee83d676b6ab8a233b43842757da3221b9f6ac8
+}

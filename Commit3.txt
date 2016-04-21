@@ -1,0 +1,176 @@
+<<<<<<< HEAD
+#include <stdio.h>
+#include<stdlib.h>
+
+int** createMatrix(int);
+void fillMatrix(int** ,int );
+void copyMatrix(int***, int** , int );
+void deleteMatrix(int*** , int);
+main()
+{
+int rozmiar=10;
+int **tablica1,**tablica2;
+tablica1=createMatrix(rozmiar);
+fillMatrix(tablica1,rozmiar);
+copyMatrix(&tablica2,tablica1,rozmiar);
+deleteMatrix(&tablica1,rozmiar);
+int k,r;
+  for (r=0;r<rozmiar;r++)
+  {
+    for (k=0;k<rozmiar;k++)
+      {
+      printf("%d ", tablica2[r][k]);
+      }
+      printf("\n");
+  }
+deleteMatrix(&tablica2,rozmiar);
+return 0;
+}
+int** createMatrix(int n)
+{
+  int** ptr;
+  int i;
+  if (n<2)
+    return NULL;
+  ptr=malloc(n*sizeof(*ptr));// sizeof(int*)
+  if(ptr==NULL)
+    return NULL;
+  for (i=0; i<n;i++)
+    {
+      ptr[i]=malloc(n*sizeof(int));
+      if(ptr[i]==NULL)
+      {
+    deleteMatrix(&ptr,i);
+    return NULL;
+      }
+}
+return ptr;
+}
+void fillMatrix(int** tab, int n)
+{
+  int i=1,k,r;
+  for (r=0;r<n;r++)
+  {
+    for (k=0;k<n;k++)
+      {
+    tab[r][k]=i;
+    i++;
+      }
+  }
+}
+
+void copyMatrix(int ***dest, int** src, int n)
+{
+ int** des=*dest;
+ des=createMatrix(n);
+ if(des!=NULL)
+ {
+  int k,r;
+  for (r=0;r<n;r++)
+  {
+    for (k=0;k<n;k++)
+      {
+      des[r][k]=src[r][k];
+      }
+  }
+ }
+  *dest=des;
+}
+
+void deleteMatrix(int*** ptab, int n)
+{
+ int k,r;
+  for (r=0;r<n;r++)
+  {
+      free((*ptab)[r]);
+   }
+   free(*ptab);
+=======
+#include <stdio.h>
+#include<stdlib.h>
+
+int** createMatrix(int);
+void fillMatrix(int** ,int );
+void copyMatrix(int***, int** , int );
+void deleteMatrix(int*** , int);
+main()
+{
+int rozmiar=10;
+int **tablica1,**tablica2;
+tablica1=createMatrix(rozmiar);
+fillMatrix(tablica1,rozmiar);
+copyMatrix(&tablica2,tablica1,rozmiar);
+deleteMatrix(&tablica1,rozmiar);
+int k,r;
+  for (r=0;r<rozmiar;r++)
+  {
+    for (k=0;k<rozmiar;k++)
+      {
+      printf("%d ", tablica2[r][k]);
+      }
+      printf("\n");
+  }
+deleteMatrix(&tablica2,rozmiar);
+return 0;
+}
+int** createMatrix(int n)
+{
+  int** ptr;
+  int i;
+  if (n<2)
+    return NULL;
+  ptr=malloc(n*sizeof(*ptr));// sizeof(int*)
+  if(ptr==NULL)
+    return NULL;
+  for (i=0; i<n;i++)
+    {
+      ptr[i]=malloc(n*sizeof(int));
+      if(ptr[i]==NULL)
+      {
+    deleteMatrix(&ptr,i);
+    return NULL;
+      }
+}
+return ptr;
+}
+void fillMatrix(int** tab, int n)
+{
+  int i=1,k,r;
+  for (r=0;r<n;r++)
+  {
+    for (k=0;k<n;k++)
+      {
+    tab[r][k]=i;
+    i++;
+      }
+  }
+}
+
+void copyMatrix(int ***dest, int** src, int n)
+{
+ int** des=*dest;
+ des=createMatrix(n);
+ if(des!=NULL)
+ {
+  int k,r;
+  for (r=0;r<n;r++)
+  {
+    for (k=0;k<n;k++)
+      {
+      des[r][k]=src[r][k];
+      }
+  }
+ }
+  *dest=des;
+}
+
+void deleteMatrix(int*** ptab, int n)
+{
+ int k,r;
+  for (r=0;r<n;r++)
+  {
+      free((*ptab)[r]);
+   }
+   free(*ptab);
+>>>>>>> 0ee83d676b6ab8a233b43842757da3221b9f6ac8
+}
