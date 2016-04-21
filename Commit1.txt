@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+<<<<<<< HEAD <3<3<3<3<3<3<3<3<3<3
 #include <stdio.h>
 #include <conio.h>
 
