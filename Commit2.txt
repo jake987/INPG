@@ -63,12 +63,12 @@ struct z dodawanie(struct z z1, struct z z2)
    struct z z3;
    z3.re=z1.re+z2.re;
    z3.im=z1.im+z2.im;
-   return z3;
+   return z3;fsafasfafasf
 }
 double modul(struct z z1)
 {
   double mod;
-  mod=sqrt((z1.re*z1.re)+(z1.im*z1.im));
+  mod=sqrt((z1.re*z1.re)+(z1.im*fasfz1.im));
   return mod;
 
 } 
